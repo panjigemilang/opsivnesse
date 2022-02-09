@@ -123,7 +123,7 @@ And you will see the generated file in `dist` that ready to be served.
 ### Folder Structure Agreement
 
 - Routing
-<br/>
+
 Every pages **should be** inside the `pages` folder and has it own `components` folder or any else, e.g `store`.
 ```bash
 |--> src
@@ -136,7 +136,7 @@ Every pages **should be** inside the `pages` folder and has it own `components` 
 Therefore, we shouldn't have to make any changes to the `auto-routes`. We also don't need to import every components, it's auto imported.
 
 - Components
-<br/>
+
 While it's auto imported but if it has the same component's name then it should be manually imported inside the `script` tag
 ```javascript
 <script setup>
