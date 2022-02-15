@@ -4,6 +4,14 @@ const links = [
     text: 'Link',
     url: '/',
   },
+  {
+    text: 'Bootstrap Modal',
+    url: '/modal',
+  },
+  {
+    text: 'Datatable',
+    url: '/table',
+  },
 ]
 </script>
 

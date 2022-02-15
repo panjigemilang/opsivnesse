@@ -1,14 +1,12 @@
 button:
-  about: About
-  back: Back
-  go: GO
-  home: Home
-  toggle_dark: Toggle dark mode
-  toggle_langs: Change languages
-intro:
-  desc: Opinionated Vite Starter Template
-  dynamic-route: Demo of dynamic route
-  hi: Hi, {name}!
-  aka: Also known as
-  whats-your-name: What's your name?
-not-found: Not found
+  back: Go Back
+  toggle_dark: Toggle Dark Mode
+index:
+  title: List of Experiments on the Navbar above
+modal:
+  body: This is Modal Body
+  button:
+    close: Close
+    show: Click to Show Modal
+  title: This is Modal Title
+not-found: Page Not Found

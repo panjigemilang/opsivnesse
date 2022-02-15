@@ -7,12 +7,14 @@ declare module 'vue' {
     '[...all]': typeof import('./pages/[...all].vue')['default']
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
-    Hi: typeof import('./pages/hi/index.vue')['default']
-    Jajal: typeof import('./pages/hi/components/Jajal.vue')['default']
+    CarbonWarning: typeof import('~icons/carbon/warning')['default']
     LinkAv: typeof import('./components/atoms/LinkAv.vue')['default']
+    Modal: typeof import('./pages/modal/index.vue')['default']
+    ModalBv: typeof import('./components/molecules/Bootstrap/ModalBv.vue')['default']
     NavbarMv: typeof import('./components/molecules/NavbarMv.vue')['default']
     README: typeof import('./components/README.md')['default']
     SideNavbarMv: typeof import('./components/molecules/SideNavbarMv.vue')['default']
+    Table: typeof import('./pages/table/index.vue')['default']
     Undefined: typeof import('./pages/index.vue')['default']
   }
 }

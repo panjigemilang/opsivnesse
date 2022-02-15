@@ -1,5 +1,6 @@
 import { createI18n } from 'vue-i18n'
 import type { UserModule } from '~/types'
+import { Helper } from '~/utils'
 
 // Import i18n resources
 // https://vitejs.dev/guide/features.html#glob-import
@@ -10,14 +11,17 @@ const messages = Object.fromEntries(
     import.meta.globEager('../../locales/*.y(a)?ml'))
     .map(([key, value]) => {
       const yaml = key.endsWith('.yaml')
+
       return [key.slice(14, yaml ? -5 : -4), value.default]
     }),
 )
 
 export const install: UserModule = ({ app }) => {
+  const lang = Helper.getLang()
+
   const i18n = createI18n({
     legacy: false,
-    locale: 'en',
+    locale: lang,
     messages,
   })
 

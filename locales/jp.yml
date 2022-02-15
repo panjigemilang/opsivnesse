@@ -1,0 +1,12 @@
+button:
+  back: 戻る
+  toggle_dark: ドラックモード
+index:
+  title: この上で実験があります
+modal:
+  body: これはもダル体
+  button:
+    close: 閉じる
+    show: クリックして表示
+  title: これはもダルタイトル
+not-found: ページが見つかりません

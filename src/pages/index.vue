@@ -1,7 +1,11 @@
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
+
 <template>
   <div>
     <h1>
-      List of experiments
+      {{ t('index.title') }}
     </h1>
   </div>
 </template>

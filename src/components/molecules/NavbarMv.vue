@@ -1,6 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import { isDark, toggleDark } from '~/composables'
-const { t } = useI18n()
+import { Helper } from '~/utils'
+
+const { t, locale, availableLocales } = useI18n()
+const router = useRouter()
 
 const props = defineProps({
   links: {
@@ -10,6 +13,13 @@ const props = defineProps({
 })
 
 const { links } = toRefs(props)
+const currentLang = ref(Helper.getLocalStorage('lang'))
+
+const selectLanguage = ({ target }) => {
+  // change localstorage URL
+  Helper.setLocalStorage('lang', target.value)
+  window.location.reload()
+}
 
 </script>
 
@@ -20,9 +30,16 @@ const { links } = toRefs(props)
         <link-av :text="link.text" :url="link.url" />
       </li>
     </ul>
-    <button class="icon-btn !outline-none absolute right-5 top-5" :title="t('button.toggle_dark')" @click="toggleDark()">
-      <carbon-moon v-if="isDark" />
-      <carbon-sun v-else />
-    </button>
+    <div class="absolute right-5 top-5 flex">
+      <select id="toggle-lang" name="language" @change="selectLanguage($event)">
+        <option v-for="language in availableLocales" :key="language" :selected="language === currentLang" :value="language">
+          {{ language.toUpperCase() }}
+        </option>
+      </select>
+      <button class="icon-btn !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
+        <carbon-moon v-if="isDark" />
+        <carbon-sun v-else />
+      </button>
+    </div>
   </nav>
 </template>
